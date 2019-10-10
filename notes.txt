@@ -1,0 +1,41 @@
+-How to create a database?
+
+
+-Mysql is not case sensitive.
+-to Open a database?
+
+USE database_name;
+
+
+CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
+
+
+
+GRANT permission ON table_name to 'username'@'hostname' [WITH GRANT OPTION];
+
+CREATE TABLE table_name{
+    id INT UNISGNED NOT NULL AUTO INCREMENT,
+    field_name_2 TYPE,
+    ...
+    PRIMARY KEY(id)
+}
+** you dont always need the key but almost always you should have one **
+
+SHOW TABLES;
+DESCRIBE table_name;
+
+
+[IF NOT EXISTS]
+
+
+CREATE DATABASE database_name;
+SHOW CREATE TABLE table_name;
+
+DROP USER 'username'@'hostname';
+DROP DATABASE database_name;
+DROP TABLE table_name;
+
+
+
+
+
