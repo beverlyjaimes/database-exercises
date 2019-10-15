@@ -21,3 +21,4 @@ FROM employees
 WHERE hire_date Like '199%' AND birth_date like '%12-25%'
 ORDER BY birth_date ASC, hire_date DESC
 LIMIT 5 OFFSET 45;
+
