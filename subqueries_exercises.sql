@@ -46,4 +46,22 @@ WHERE emp_no IN (
 # | Leon       | DasSarma   |
 # | Hilary     | Kambil     |
 # +------------+------------+
+#
+# SELECT first_name, last_name, birth_date
+# FROM employees
+# WHERE emp_no IN (
+#     SELECT emp_no
+#     FROM dept_manager
+# )
+# LIMIT 10;
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN (
+
+    select emp_no
+    from dept_manager
+    where to_date > now()
+    AND gender = 'F'
+
+    );
 
