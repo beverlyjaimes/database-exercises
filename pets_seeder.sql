@@ -1,6 +1,8 @@
 USE ceres_db;
 
 
+
+
 INSERT INTO owners (name, address)
 VALUES
 ('Darth Smith', '1138 Death Star Rd.'),
@@ -27,6 +29,11 @@ JOIN owners ON pets.owner_id = owners.id;
 SELECT pets.age, owners.address
 FROM pets
 JOIN owners on pets.owner_id = owners.id;
+
+SELECT owners.address, COUNT(*)
+FROM pets
+JOIN owners ON pets.owner_id = owners.id
+GROUP BY owners.address;
 
 
 SHOW TABLES;
