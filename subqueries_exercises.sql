@@ -20,10 +20,20 @@ WHERE hire_date =(
     select hire_date from employees where emp_no = '101010'
     );
 
+
+select * from employees where emp_no = '101010';
+
 #
 # Find all the titles held by all employees with the first name Aamod.
 #
 # 314 total titles, 6 unique titles
+
+SELECT * FROM titles
+WHERE emp_no IN (
+    select emp_no from employees where first_name = 'Aamod'
+    );
+
+
 #
 # Find all the current department managers that are female.
 #
