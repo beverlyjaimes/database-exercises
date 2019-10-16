@@ -35,3 +35,13 @@ WHERE dept_manager.to_date > NOW() AND salaries.to_date > NOW()
 ORDER BY dept_name;
 
 SELECT * FROM departments;
+#
+# SELECT * FROM dept_manager
+# WHERE dept_no =(
+#     select dept_no from departments where dept_name = 'Sales'
+#     );
+#
+# SELECT first_name, last_name from employees
+# where emp_no IN (
+#     select emp_no from dept_manager
+#     );
