@@ -65,3 +65,26 @@ WHERE emp_no IN (
 
     );
 
+SELECT dept_name FROM departments
+WHERE dept_no IN (
+     select dept_no from dept_manager
+
+         WHERE emp_no IN (
+
+     select emp_no
+     from employees
+     where to_date > now()
+         AND gender = 'F'
+
+     )
+
+    );
+
+
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN (
+    select emp_no from salaries where salary = '158220'
+    );
+
+# select salary from salaries order by salary desc ;
